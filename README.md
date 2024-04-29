@@ -53,9 +53,9 @@ We visualize the experimental results and it is shown that the four comparison m
 
 ### Installation
 
-The code framework is mainly borrowed from open-cd. Thus
+The code framework is mainly borrowed from open-cd. Thus,
 
-Please refer to [opencd-README.md](https://github.com/likyoo/open-cd/blob/main/README.md) for installing main packeges such as python, pytorch, etc.
+please refer to [opencd-README.md](https://github.com/likyoo/open-cd/blob/main/README.md) for installing main packeges such as python, pytorch, etc.
 
 If there is some problem running the BMQNet, please try the following environment:
 - Python 3.8.18
