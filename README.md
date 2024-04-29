@@ -21,7 +21,7 @@ Remote-sensing image change detection (CD) task plays an important role in disas
 <figcaption align = "center"><b>(a) is the overall framework of BMQNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSR-FPN in figture (b). </b></figcaption>
 </figure>
 
-## statement
+## Statement
 We adopt a change detection toolbox, open-cd, based on PyTorch and OpenMMLab related tools. Most of the basic codes are mainly from open-cd ( https://github.com/likyoo/open-cd ), please go to the sourced code if there are some problems. 
 
 
