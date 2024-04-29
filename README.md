@@ -9,127 +9,64 @@
 
 ## Introduction
 
-This repository contains codes, models and test results for the paper "An Empirical Study of Remote Sensing Pretraining". 
+This repository contains codes, models and test results for the paper "Enhancing Change Detection Network via Bidirectional Matching Query for Remote Sensing Images". 
 
-The aerial images are usually obtained by a camera in a birdview perspective lying on the planes or satellites, perceiving a large scope of land uses and land covers, whose scene is usually difficult to be interpreted since the interference of the scene-irrelevant regions and the complicated spatial distribution of land objects. Although deep learning has largely reshaped remote sensing research for aerial image understanding and made a great success. However, most of existing deep models are initialized with ImageNet pretrained weights, where the natural images inevitably presents a large domain gap relative to the aerial images, probably limiting the finetuning performance on downstream aerial scene tasks. This issue motivates us to conduct an empirical study of remote sensing pretraining. To this end, we train different networks from scratch with the help of the largest remote sensing scene recognition dataset up to now-MillionAID, to obtain the remote sensing pretrained backbones, including both convolutional neural networks (CNN) and vision transformers such as Swin and [ViTAE](https://arxiv.org/pdf/2202.10108.pdf), which have shown promising performance on computer vision tasks. Then, we investigate the impact of ImageNet pretraining (IMP) and RSP on a series of downstream tasks including scene recognition, semantic segmentation, object detection, and ***#change detection#*** using the CNN and vision transformers backbones. 
+Remote-sensing image change detection (CD) task plays an important role in disaster assessment, earth observation and other missions. Now, more studies focus on feature interaction between the bitemporal images. However, existing models solely concentrate on global alignment the entire image, neglecting the highlighting of local heterogeneous characteristics. This deficiency leads to negative understanding of change region during feature interaction. To solve this issue, we propose Bidirectional Matching Query (BMQ) module, which improves the saliency of change regions and makes the model grasp the concept of “change region of interest” by querying potential change regions for matching in the feature interaction. Additionally, to enhance the ability of feature representation and spatial relationship, we also propose Deep Semantic Regulation Feature Pyramid Network (DSR-FPN). It makes better use of deep semantic feature and realizes central regulation from top to bottom. With mentioned above, we design the network BMQNet and conduct experiments on two benchmark datasets. The experimental results show that BMQNet achieves better performance than other advanced foundation models in change detection task.
 
 
 <figure>
 <div align="center">
-<img src=../Figs/cd.png width="100%">
+<img src=BMQNet.png width="80%">
 </div>
-<figcaption align = "center"><b>Fig. - Visual change detection results. The first and second row separately show the change detection results of a sample image from the CDD and LEVIR datasets. Here, (a) and (k), (b) and (l) are the first and second temporals of the same regions. (c) and (m) are ground truth change annotations. (d) and (n) are the results of the IMP-ResNet-50 based BIT, while (e) and (o), (f) and (p), (f) and (o), (g) and (q), (h) and (r), (i) and (s), (g) and (t) are the results from the SeCo-ResNet-50, RSP-ResNet-50, IMP-Swin-T, RSP-Swin-T, IMP-ViTAEv2-S, and RSP-ViTAEv2-S backbones, respectively. </b></figcaption>
+<figcaption align = "center"><b>(a) is the overall framework of BMQNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSR-FPN in figture (b). </b></figcaption>
 </figure>
+
+## statement
+We adopt a change detection toolbox, open-cd, based on PyTorch and OpenMMLab related tools. Most of the basic codes are mainly from open-cd ( https://github.com/likyoo/open-cd ), please go to the sourced code if there are some problems. 
 
 
 ## Results and Models
-### CDD
+### LEBIR-CD
 
 | Method | Backbone |Input size  | F1  | Model |
 | ------ | -------- |---------- | ------- | --- |
-| BIT| RSP-ResNet-50-E300|256 × 256 | 96.00 |  [google](https://drive.google.com/file/d/1SMNY93e5zKLFtzSyCeM7I5Wb7_qC61uP/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1mg0etrKMprRKKF69373bew?pwd=29u4) |
-| BIT| RSP-Swin-T-E300 |256 × 256 | 95.21 |  [google](https://drive.google.com/file/d/1GhVXtT8fhi7yfJjJFbQPt95Prw3dAZ6L/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1gSgU5ZH6Fs0-RF21navLXA?pwd=1y6s) |
-| BIT| RSP-ViTAEv2-S-E100 |256 × 256  | 96.81 | [google](https://drive.google.com/file/d/1ZGmx1lgzATJwy6Wk_HRFZRrFRgFWF-S6/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1qwr1TKmiQ5LuQ5ZC3oGX3w?pwd=q3vd) |
-
-### LEVIR
+| BMQNet| Swin-T |512 × 512 | 92.01 |  [google](https://drive.google.com/file/d/1SMNY93e5zKLFtzSyCeM7I5Wb7_qC61uP/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1mg0etrKMprRKKF69373bew?pwd=29u4) |
+| BMQNet| ViTAEv2-S |512 × 512 | 92.37 |  [google](https://drive.google.com/file/d/1GhVXtT8fhi7yfJjJFbQPt95Prw3dAZ6L/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1gSgU5ZH6Fs0-RF21navLXA?pwd=1y6s) |
+### S2Looking
 
 | Method | Backbone |Input size | F1 | Model |
 | ------ | -------- |---------- | ------- | --- |
-| BIT| RSP-ResNet-50-E300 |256 × 256| 90.10 | [google](https://drive.google.com/file/d/1TX1VCCIcH0lsj6pObXj3u5PJTXB3_18o/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1urzS_zuW1FxQzACihaCoZQ?pwd=p2vr) |
-| BIT| RSP-Swin-T-E300 |256 × 256| 90.10 | [google](https://drive.google.com/file/d/1MfaYBJdeCWg2qgqyjwOYr-KJpjCVHwHe/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1h7gptokQLFA4o17CdOHUdw?pwd=ba5x) |
-| BIT| RSP-ViTAEv2-S-E100 |256 × 256 | 90.93 |  [google](https://drive.google.com/file/d/1z5ge7vN6d8tXKn82W6uNNNl5DAMbLb5v/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1ew3ZItT7HtuQP273yGJphg?pwd=utr9) |
+| BMQNet| Swin-T |512 × 512 | 66.69 |  [google](https://drive.google.com/file/d/1SMNY93e5zKLFtzSyCeM7I5Wb7_qC61uP/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1mg0etrKMprRKKF69373bew?pwd=29u4) |
+| BMQNet| ViTAEv2-S |512 × 512 | 67.08 |  [google](https://drive.google.com/file/d/1GhVXtT8fhi7yfJjJFbQPt95Prw3dAZ6L/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1gSgU5ZH6Fs0-RF21navLXA?pwd=1y6s) |
 
 ## Usage
 
 ### Installation
 
-The code framework is mainly borrowed from the SNUNet, while we use BIT in the network part. Thus
+The code framework is mainly borrowed from open-cd. Thus
 
-Please refer to [BIT-Readme.md](https://github.com/justchenhao/BIT_CD/blob/master/README.md) for installing main packeges such as python, pytorch, etc.
+Please refer to [opencd-README.md](https://github.com/likyoo/open-cd/blob/main/README.md) for installing main packeges such as python, pytorch, etc.
 
-Please refer to [SNUNet-Readme.md](https://github.com/RSCD-Lab/Siam-NestedUNet/blob/master/README.md) for other required packages.
-
-Besides, install ```torchmetrics``` for faster metrics:
-
-```
-# Python Package Index (PyPI)
-pip install torchmetrics
-# Conda
-conda install -c conda-forge torchmetrics
-```
-
-### Data Preparation
-
-- [CDD](https://drive.google.com/file/d/1GX656JqqOyBi_Ef0w65kDGVto-nHrNs9/edit)
-- [LEVIR](https://justchenhao.github.io/LEVIR/)
-
-For LEVIR dataset, clip the images to 256 × 256 patches and change the structure to 
-
-```
-│─train
-│   ├─A
-│   ├─B
-│   └─OUT
-│─val
-│   ├─A
-│   ├─B
-│   └─OUT
-└─test
-    ├─A
-    ├─B
-    └─OUT
-```
-A: t1 image
-
-B: t2 image
-
-OUT: Binary label map
-
-
+If there is some problem running the BMQNet, please try the following environment:
+- Python 3.8.18
+- Pytorch 1.9.0+cu111
+- torchvision 0.10.0+cu111
+- timm 0.9.12
+- mmcv 2.1.0
+- mmengine 0.10.2
+  
 ### Training
 
-Training the BIT with RSP-ResNet-50 backbone on CDD dataset: 
+Training the BMQNet with Swin-T backbone on LEVIR-CD dataset: 
 
 ```
-python train.py \
---backbone 'resnet' --dataset 'cdd' --mode 'rsp_300'
+python tools/train.py configs/BMQNet/BMQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py --work-dir ./BMQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01
 ```
 
 ### Inference
 
-Evaluation using RSP-Swin-T on LEVIR dataset
+Evaluation using ViTAEv2-S on S2Looking dataset
 
 ```
-python eval.py \
---backbone 'swin' --dataset 'levir' --mode 'rsp_300' \
---path [model path]
+python tools/test.py configs/BMQNet/BMQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/S2Looking
 ```
-
-Predicting the change detection map using RSP-ViTAEv2-S on LEVIR dataset
-
-```
-python visualization.py \
---backbone 'vitae' --dataset 'levir' --mode 'rsp_100' \
---path [model path]
-```
-
-## Other Links
-
-> **Scene Recognition: Please see [Remote Sensing Pretraining for Scene Recognition](https://github.com/ViTAE-Transformer/RSP/tree/main/Scene%20Recognition)**;
-
-> **Sementic Segmentation: Please see [Remote Sensing Pretraining for Semantic Segmentation](https://github.com/ViTAE-Transformer/RSP/tree/main/Semantic%20Segmentation)**;
-
-> **Object Detection: Please see [Remote Sensing Pretraining for Object Detection](https://github.com/ViTAE-Transformer/RSP/tree/main/Object%20Detection)**;
-
-> **ViTAE: Please see [ViTAE-Transformer](https://github.com/ViTAE-Transformer/ViTAE-Transformer)**;
-
-> **Matting: Please see [ViTAE-Transformer for matting](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting)**;
-
-
-## Statement
-
-This project is for research purpose only. For any other questions please contact [di.wang at gmail.com](mailto:wd74108520@gmail.com) .
-
-## References
-
-The codes are mainly borrowed from [SNUNet-CD](https://github.com/RSCD-Lab/Siam-NestedUNet) and [BIT-CD](https://github.com/justchenhao/BIT_CD)
