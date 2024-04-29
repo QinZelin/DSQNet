@@ -36,7 +36,7 @@ We visualize the experimental results and it is shown that the four comparison m
 <figcaption align = "center"><b>Comparison of change maps of different methods on LEVIR-CD and S2Looking dataset. The red and green colors represent FP and FN results, respectively. (a) T1. (b) T2. (c) Ground Truth. (d) STANet. (e) BiT. (f) AANet. (g) ChangerAD. (h) Ours. </b></figcaption>
 </figure>
 
-### LEBIR-CD
+### LEVIR-CD
 
 | Method | Backbone |Input size  | F1  | Model |
 | ------ | -------- |---------- | ------- | --- |
