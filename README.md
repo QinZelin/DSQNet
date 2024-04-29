@@ -63,10 +63,23 @@ Training the BMQNet with Swin-T backbone on LEVIR-CD dataset:
 python tools/train.py configs/BMQNet/BMQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py --work-dir ./BMQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01
 ```
 
+Training the BMQNet with ViTAEv2-S backbone on S2Looking dataset: 
+
+```
+python tools/train.py BMQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py --work-dir ./BMQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py
+```
+
 ### Inference
 
-Evaluation using ViTAEv2-S on S2Looking dataset
+Evaluation using Swin-T backbone on LEVIR-CD dataset
+
+```
+python tools/test.py configs/BMQNet/BMQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/LEVIR
+```
+
+Evaluation using ViTAEv2-S backbone on S2Looking dataset
 
 ```
 python tools/test.py configs/BMQNet/BMQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/S2Looking
 ```
+
