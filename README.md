@@ -26,6 +26,16 @@ We adopt a change detection toolbox, open-cd, based on PyTorch and OpenMMLab rel
 
 
 ## Results and Models
+
+We visualize the experimental results and it is shown that the four comparison models tend to produce results with incomplete regions. Instead, our proposed model can overcome this issue and produce semantically consistent regions in most cases, which further certifies its effectiveness.
+
+<figure>
+<div align="center">
+<img src=results.png width="60%">
+</div>
+<figcaption align = "center"><b>Comparison of change maps of different methods on LEVIR-CD and S2Looking dataset. The red and green colors represent FP and FN results, respectively. (a) T1. (b) T2. (c) Ground Truth. (d) STANet. (e) BiT. (f) AANet. (g) ChangerAD. (h) Ours. </b></figcaption>
+</figure>
+
 ### LEBIR-CD
 
 | Method | Backbone |Input size  | F1  | Model |
