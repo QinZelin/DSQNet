@@ -30,14 +30,14 @@ We adopt a change detection toolbox, open-cd, based on PyTorch and OpenMMLab rel
 
 | Method | Backbone |Input size  | F1  | Model |
 | ------ | -------- |---------- | ------- | --- |
-| BMQNet| Swin-T |512 × 512 | 92.01 |  [google](https://drive.google.com/file/d/1SMNY93e5zKLFtzSyCeM7I5Wb7_qC61uP/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1mg0etrKMprRKKF69373bew?pwd=29u4) |
-| BMQNet| ViTAEv2-S |512 × 512 | 92.37 |  [google](https://drive.google.com/file/d/1GhVXtT8fhi7yfJjJFbQPt95Prw3dAZ6L/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1gSgU5ZH6Fs0-RF21navLXA?pwd=1y6s) |
+| BMQNet| Swin-T |512 × 512 | 92.01 |  [baidu](https://pan.baidu.com/s/1-2IuJaOjhEi5luGk3sO2tw?pwd=rbsv) |
+| BMQNet| ViTAEv2-S |512 × 512 | 92.37 |  [baidu](https://pan.baidu.com/s/1nEQ_o63hzl4Y8goqBHcVMg?pwd=inzx) |
 ### S2Looking
 
 | Method | Backbone |Input size | F1 | Model |
 | ------ | -------- |---------- | ------- | --- |
-| BMQNet| Swin-T |512 × 512 | 66.69 |  [google](https://drive.google.com/file/d/1SMNY93e5zKLFtzSyCeM7I5Wb7_qC61uP/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1mg0etrKMprRKKF69373bew?pwd=29u4) |
-| BMQNet| ViTAEv2-S |512 × 512 | 67.08 |  [google](https://drive.google.com/file/d/1GhVXtT8fhi7yfJjJFbQPt95Prw3dAZ6L/view?usp=sharing) & [baidu](https://pan.baidu.com/s/1gSgU5ZH6Fs0-RF21navLXA?pwd=1y6s) |
+| BMQNet| Swin-T |512 × 512 | 66.69 |  [baidu](https://pan.baidu.com/s/1x4EynqGiKNOdrT4nfWom3g?pwd=ztga ) |
+| BMQNet| ViTAEv2-S |512 × 512 | 67.08 |  [baidu](https://pan.baidu.com/s/1ee88ZbYrYKm0NhpCU1gl2g?pwd=4ky8 ) |
 
 ## Usage
 
