@@ -11,14 +11,14 @@
 
 This repository contains codes, models and test results for the paper "Enhancing Change Detection Network via Bidirectional Matching Query for Remote Sensing Images". 
 
-Remote-sensing image change detection (CD) task plays an important role in disaster assessment, earth observation and other missions. Now, more studies focus on feature interaction between the bitemporal images. However, existing models solely concentrate on global alignment the entire image, neglecting the highlighting of local heterogeneous characteristics. This deficiency leads to negative understanding of change region during feature interaction. To solve this issue, we propose Bidirectional Matching Query (BMQ) module, which improves the saliency of change regions and makes the model grasp the concept of “change region of interest” by querying potential change regions for matching in the feature interaction. Additionally, to enhance the ability of feature representation and spatial relationship, we also propose Deep Semantic Regulation Feature Pyramid Network (DSR-FPN). It makes better use of deep semantic feature and realizes central regulation from top to bottom. With mentioned above, we design the network BMQNet and conduct experiments on two benchmark datasets. The experimental results show that BMQNet achieves better performance than other advanced foundation models in change detection task.
+Remote-sensing image change detection (CD) task plays an important role in environmental protection, agricultural monitoring and other missions. Now, more studies focus on feature interaction between the bitemporal images. However, existing models solely concentrate on global alignment the entire image, neglecting the highlighting of local heterogeneous characteristics. This deficiency leads to negative understanding of change region during feature interaction. To solve this issue, we propose Bidirectional Matching Query (BMQ) module, which boosts the prominence of change regions and makes the model grasp the concept of “change region of interest” by querying potential change regions for matching in the feature interaction. Additionally, to enhance the ability of feature extraction and spatial representation capture, we also propose Deep Semantic Adjustment Feature Pyramid Network (DSA-FPN). It makes better use of deep semantic feature and realizes interlayer feature adjustment from top to bottom. With mentioned above, we design the network BMQNet and conduct experiments on two benchmark datasets. The experimental results show that BMQNet achieves better performance than other advanced foundation models in change detection task.
 
 
 <figure>
 <div align="center">
-<img src=BMQNet.png width="80%">
+<img src=BMQModel.png width="80%">
 </div>
-<figcaption align = "center"><b>(a) is the overall framework of BMQNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSR-FPN in figture (b). </b></figcaption>
+<figcaption align = "center"><b>(a) is the overall framework of BMQNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSA-FPN in figture (b). </b></figcaption>
 </figure>
 
 ## Statement
