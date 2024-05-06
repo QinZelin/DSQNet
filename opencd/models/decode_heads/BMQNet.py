@@ -423,7 +423,7 @@ class BMQNet(BaseDecodeHead):
             inputs1.append(f1)
             inputs2.append(f2)
 
-        # DSR-FPN
+        # DSA-FPN
         out1,query_bias1=self.CFP(inputs1)
         out2,query_bias2 = self.CFP(inputs2)
         b, c, h, w = out1.shape
