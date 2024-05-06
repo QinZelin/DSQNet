@@ -75,12 +75,9 @@ val_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         data_prefix=dict(
-            # seg_map_path='val/label',
-            # img_path_from='val/Image1',
-            # img_path_to='val/Image2'
-            seg_map_path='test/OUT',
-            img_path_from='test/A',
-            img_path_to='test/B'
+            seg_map_path='val/label',
+            img_path_from='val/Image1',
+            img_path_to='val/Image2'
         ),
         pipeline=test_pipeline))
 test_dataloader = dict(
