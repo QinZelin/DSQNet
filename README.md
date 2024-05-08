@@ -1,4 +1,4 @@
-<h1 align="center"> Enhancing Change Detection Network via Bidirectional Matching Query for Remote Sensing Images </h1> 
+<h1 align="center"> PPNet: Enhancing Remote Sensing Image Change Detection Network via Potential Perception </h1> 
 
 <p align="center">
   <a href="#introduction">Introduction</a> |
@@ -9,16 +9,16 @@
 
 ## Introduction
 
-This repository contains codes, models and test results for the paper "Enhancing Change Detection Network via Bidirectional Matching Query for Remote Sensing Images". 
+This repository contains codes, models and test results for the paper "PPNet: Enhancing Remote Sensing Image Change Detection Network via Potential Perception". 
 
-Remote-sensing image change detection (CD) task plays an important role in environmental protection, agricultural monitoring and other missions. Now, more studies focus on feature interaction between the bitemporal images. However, existing models solely concentrate on global alignment the entire image, neglecting the highlighting of local heterogeneous characteristics. This deficiency leads to negative understanding of change region during feature interaction. To solve this issue, we propose Bidirectional Matching Query (BMQ) module, which boosts the prominence of change regions and makes the model grasp the concept of “change region of interest” by querying potential change regions for matching in the feature interaction. Additionally, to enhance the ability of feature extraction and spatial representation capture, we also propose Deep Semantic Adjustment Feature Pyramid Network (DSA-FPN). It makes better use of deep semantic feature and realizes interlayer feature adjustment from top to bottom. With mentioned above, we design the network BMQNet and conduct experiments on two benchmark datasets. The experimental results show that BMQNet achieves better performance than other advanced foundation models in change detection task.
+Change detection from remote sensing (RS) images has made significant progress in many applications including environmental protection and agricultural monitoring. Recently, RS change detection algorithms mainly focus on feature interaction between the bitemporal images. However, since these existing models concentrate on global alignment of the whole image, they have payed less attention on local divergent characteristics, which leads to negative understanding of change region during feature interaction. It has become one of major hindrance to improving detection performance. To relieve this issue, this letter presents a change detection network PPNet that can effectively perceive potential change regions and boost the prominence of these heterogeneous features. Specifically, PPNet employs bidirectional matching query (BMQ) module to promote the model better learn the idea of “region of potential change” by querying relevant local regions for cross matching and feature alignment in the stage of interaction. Moreover, to enhance the ability of feature extraction and spatial representation, we further propose the deep semantic adjustment feature pyramid (DSP) module to better use the deep semantic feature and realize interlayer feature adjustment from the inside out. Experimental results on two benchmark datasets show that PPNet achieves better performance than other advanced change detection networks.
 
 
 <figure>
 <div align="center">
 <img src=BMQModel.png width="80%">
 </div>
-<figcaption align = "center"><b>(a) is the overall framework of BMQNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSA-FPN in figture (b). </b></figcaption>
+<figcaption align = "center"><b>(a) is the overall framework of PPNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSP in figture (b). </b></figcaption>
 </figure>
 
 ## Statement
@@ -40,14 +40,14 @@ We visualize the experimental results and it is shown that the four comparison m
 
 | Method | Backbone |Input size  | F1  | Model |
 | ------ | -------- |---------- | ------- | --- |
-| BMQNet| Swin-T |512 × 512 | 92.01 |  [baidu](https://pan.baidu.com/s/1-2IuJaOjhEi5luGk3sO2tw?pwd=rbsv) |
-| BMQNet| ViTAEv2-S |512 × 512 | 92.37 |  [baidu](https://pan.baidu.com/s/1nEQ_o63hzl4Y8goqBHcVMg?pwd=inzx) |
+| PPNet| Swin-T |512 × 512 | 92.01 |  [baidu](https://pan.baidu.com/s/1-2IuJaOjhEi5luGk3sO2tw?pwd=rbsv) |
+| PPNet| ViTAEv2-S |512 × 512 | 92.37 |  [baidu](https://pan.baidu.com/s/1nEQ_o63hzl4Y8goqBHcVMg?pwd=inzx) |
 ### S2Looking
 
 | Method | Backbone |Input size | F1 | Model |
 | ------ | -------- |---------- | ------- | --- |
-| BMQNet| Swin-T |512 × 512 | 66.69 |  [baidu](https://pan.baidu.com/s/1x4EynqGiKNOdrT4nfWom3g?pwd=ztga ) |
-| BMQNet| ViTAEv2-S |512 × 512 | 67.08 |  [baidu](https://pan.baidu.com/s/1ee88ZbYrYKm0NhpCU1gl2g?pwd=4ky8 ) |
+| PPNet| Swin-T |512 × 512 | 66.69 |  [baidu](https://pan.baidu.com/s/1x4EynqGiKNOdrT4nfWom3g?pwd=ztga ) |
+| PPNet| ViTAEv2-S |512 × 512 | 67.08 |  [baidu](https://pan.baidu.com/s/1ee88ZbYrYKm0NhpCU1gl2g?pwd=4ky8 ) |
 
 ## Usage
 
@@ -57,7 +57,7 @@ The code framework is mainly borrowed from open-cd. Thus,
 
 please refer to [opencd-README.md](https://github.com/likyoo/open-cd/blob/main/README.md) for installing main packeges such as python, pytorch, etc.
 
-If there is some problem running the BMQNet, please try the following environment:
+If there is some problem running the PPNet, please try the following environment:
 - Python 3.8.18
 - Pytorch 1.9.0+cu111
 - torchvision 0.10.0+cu111
@@ -67,16 +67,16 @@ If there is some problem running the BMQNet, please try the following environmen
   
 ### Training
 
-Training the BMQNet with Swin-T backbone on LEVIR-CD dataset: 
+Training the PPNet with Swin-T backbone on LEVIR-CD dataset: 
 
 ```
-python tools/train.py configs/BMQNet/BMQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py --work-dir ./BMQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01
+python tools/train.py configs/PPNet/PPNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py --work-dir ./PPNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01
 ```
 
-Training the BMQNet with ViTAEv2-S backbone on S2Looking dataset: 
+Training the PPNet with ViTAEv2-S backbone on S2Looking dataset: 
 
 ```
-python tools/train.py BMQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py --work-dir ./BMQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py
+python tools/train.py PPNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py --work-dir ./PPNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py
 ```
 
 ### Inference
@@ -84,12 +84,12 @@ python tools/train.py BMQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.p
 Evaluation using Swin-T backbone on LEVIR-CD dataset
 
 ```
-python tools/test.py configs/BMQNet/BMQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/LEVIR
+python tools/test.py configs/PPNet/PPNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/LEVIR
 ```
 
 Evaluation using ViTAEv2-S backbone on S2Looking dataset
 
 ```
-python tools/test.py configs/BMQNet/BMQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/S2Looking
+python tools/test.py configs/PPNet/PPNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/S2Looking
 ```
 
