@@ -18,7 +18,7 @@ Change detection from remote sensing (RS) images has made significant progress i
 <div align="center">
 <img src=DSQNetModel.png width="80%">
 </div>
-<figcaption align = "center"><b>(a) is the overall framework of PPNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSP in figture (b). </b></figcaption>
+<figcaption align = "center"><b>(a) is the overall framework of DSQNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSP in figture (b). </b></figcaption>
 </figure>
 
 ## Statement
@@ -40,14 +40,14 @@ We visualize the experimental results and it is shown that the four comparison m
 
 | Method | Backbone |Input size  | F1  | Model |
 | ------ | -------- |---------- | ------- | --- |
-| PPNet| Swin-T |512 × 512 | 92.01 |  [baidu](https://pan.baidu.com/s/1-2IuJaOjhEi5luGk3sO2tw?pwd=rbsv) |
-| PPNet| ViTAEv2-S |512 × 512 | 92.37 |  [baidu](https://pan.baidu.com/s/1nEQ_o63hzl4Y8goqBHcVMg?pwd=inzx) |
+| DSQNet| Swin-T |512 × 512 | 92.01 |  [baidu](https://pan.baidu.com/s/1-2IuJaOjhEi5luGk3sO2tw?pwd=rbsv) |
+| DSQNet| ViTAEv2-S |512 × 512 | 92.37 |  [baidu](https://pan.baidu.com/s/1nEQ_o63hzl4Y8goqBHcVMg?pwd=inzx) |
 ### S2Looking
 
 | Method | Backbone |Input size | F1 | Model |
 | ------ | -------- |---------- | ------- | --- |
-| PPNet| Swin-T |512 × 512 | 66.69 |  [baidu](https://pan.baidu.com/s/1x4EynqGiKNOdrT4nfWom3g?pwd=ztga ) |
-| PPNet| ViTAEv2-S |512 × 512 | 67.08 |  [baidu](https://pan.baidu.com/s/1ee88ZbYrYKm0NhpCU1gl2g?pwd=4ky8 ) |
+| DSQNet| Swin-T |512 × 512 | 66.69 |  [baidu](https://pan.baidu.com/s/1x4EynqGiKNOdrT4nfWom3g?pwd=ztga ) |
+| DSQNet| ViTAEv2-S |512 × 512 | 67.08 |  [baidu](https://pan.baidu.com/s/1ee88ZbYrYKm0NhpCU1gl2g?pwd=4ky8 ) |
 
 ## Usage
 
@@ -57,7 +57,7 @@ The code framework is mainly borrowed from open-cd. Thus,
 
 please refer to [opencd-README.md](https://github.com/likyoo/open-cd/blob/main/README.md) for installing main packeges such as python, pytorch, etc.
 
-If there is some problem running the PPNet, please try the following environment:
+If there is some problem running the DSQNet, please try the following environment:
 - Python 3.8.18
 - Pytorch 1.9.0+cu111
 - torchvision 0.10.0+cu111
@@ -67,16 +67,16 @@ If there is some problem running the PPNet, please try the following environment
   
 ### Training
 
-Training the PPNet with Swin-T backbone on LEVIR-CD dataset: 
+Training the DSQNet with Swin-T backbone on LEVIR-CD dataset: 
 
 ```
-python tools/train.py configs/PPNet/PPNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py --work-dir ./PPNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01
+python tools/train.py configs/DSQNet/DSQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py --work-dir ./DSQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01
 ```
 
-Training the PPNet with ViTAEv2-S backbone on S2Looking dataset: 
+Training the DSQNet with ViTAEv2-S backbone on S2Looking dataset: 
 
 ```
-python tools/train.py PPNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py --work-dir ./PPNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py
+python tools/train.py DSQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py --work-dir ./DSQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py
 ```
 
 ### Inference
@@ -84,12 +84,12 @@ python tools/train.py PPNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py
 Evaluation using Swin-T backbone on LEVIR-CD dataset
 
 ```
-python tools/test.py configs/PPNet/PPNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/LEVIR
+python tools/test.py configs/DSQNet/DSQNet_swin_imp_512x512_80k_levircd_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/LEVIR
 ```
 
 Evaluation using ViTAEv2-S backbone on S2Looking dataset
 
 ```
-python tools/test.py configs/PPNet/PPNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/S2Looking
+python tools/test.py configs/DSQNet/DSQNet_vitae_imp_512x512_80k_s2looking_lr1e-4_bs8_wd0.01.py [model pth] --show-dir visualization/S2Looking
 ```
 
