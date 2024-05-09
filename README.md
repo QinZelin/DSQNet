@@ -1,4 +1,4 @@
-<h1 align="center"> PPNet: Enhancing Remote Sensing Image Change Detection Network via Potential Perception </h1> 
+<h1 align="center"> DSQNet: Enhancing Change Detection Network via Deep Semantics Query for Remote Sensing Images </h1> 
 
 <p align="center">
   <a href="#introduction">Introduction</a> |
@@ -9,14 +9,14 @@
 
 ## Introduction
 
-This repository contains codes, models and test results for the paper "PPNet: Enhancing Remote Sensing Image Change Detection Network via Potential Perception". 
+This repository contains codes, models and test results for the paper "DSQNet: Enhancing Change Detection Network via Deep Semantics Query for Remote Sensing Images". 
 
-Change detection from remote sensing (RS) images has made significant progress in many applications including environmental protection and agricultural monitoring. Recently, RS change detection algorithms mainly focus on feature interaction between the bitemporal images. However, since these existing models concentrate on global alignment of the whole image, they have payed less attention on local divergent characteristics, which leads to negative understanding of change region during feature interaction. It has become one of major hindrance to improving detection performance. To relieve this issue, this letter presents a change detection network PPNet that can effectively perceive potential change regions and boost the prominence of these heterogeneous features. Specifically, PPNet employs bidirectional matching query (BMQ) module to promote the model better learn the idea of “region of potential change” by querying relevant local regions for cross matching and feature alignment in the stage of interaction. Moreover, to enhance the ability of feature extraction and spatial representation, we further propose the deep semantic adjustment feature pyramid (DSP) module to better use the deep semantic feature and realize interlayer feature adjustment from the inside out. Experimental results on two benchmark datasets show that PPNet achieves better performance than other advanced change detection networks.
+Change detection from remote sensing (RS) images has made significant progress in many applications including environmental protection and agricultural monitoring. Recently, RS change detection algorithms mainly focus on feature interaction between the bitemporal images. However, since these existing models concentrate on global alignment of the whole image, they have payed less attention on local divergent characteristics, which leads to negative understanding of change region during feature interaction. It has become one of major hindrance to improving detection performance. To relieve this issue, this letter presents a change detection network DSQNet that queries potential change regions using keys with deep semantics to boost the prominence of these heterogeneous features. Specifically, DSQNet employs bidirectional matching query (BMQ) module to promote the model better learn the idea of “region of potential change” by utilizing query keys to adequately perceive local relevant features for cross matching in the stage of interaction. Moreover, in order to make the query key and the feature representation aligned in the semantic space, we further propose the deep semantic adjustment feature pyramid (DSP) module. It realizes interlayer feature adjustment from the inside out in pyramid and enables query keys represent extremely rich semantics, improving query efficiency. Experimental results on two benchmark datasets show that DSQNet achieves better performance than other advanced change detection networks.
 
 
 <figure>
 <div align="center">
-<img src=PPNetModel.png width="80%">
+<img src=DSQNetModel.png width="80%">
 </div>
 <figcaption align = "center"><b>(a) is the overall framework of PPNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSP in figture (b). </b></figcaption>
 </figure>
