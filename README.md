@@ -16,7 +16,7 @@ Change detection from remote sensing (RS) images has made significant progress i
 
 <figure>
 <div align="center">
-<img src=DSQNetModel.png width="80%">
+<img src=DSQNet.png width="80%">
 </div>
 <figcaption align = "center"><b>(a) is the overall framework of DSQNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSP in figture (b). </b></figcaption>
 </figure>
