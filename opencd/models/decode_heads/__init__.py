@@ -6,8 +6,8 @@ from .multi_head import MultiHeadDecoder
 from .sta_head import STAHead
 from .tiny_head import TinyHead
 from .changerEx import ChangerEx
-from .BMQNet import BMQNet
-from .BMQNet_pool import BMQNet_pool
+from .DSQNet import DSQNet
+from .DSQNet_pool import DSQNet_pool
 
 __all__ = ['BITHead', 'Changer', 'IdentityHead', 'DSIdentityHead', 'TinyHead',
-           'STAHead', 'MultiHeadDecoder', 'GeneralSCDHead','changerEx','BMQNet','BMQNet_pool']
+           'STAHead', 'MultiHeadDecoder', 'GeneralSCDHead','changerEx','DSQNet','DSQNet_pool']
