@@ -273,7 +273,7 @@ class MixFFN(BaseModule):
 
 
 @MODELS.register_module()
-class BMQNet(BaseDecodeHead):
+class DSQNet(BaseDecodeHead):
 
     def __init__(self, img_size=512,interpolate_mode='bilinear', **kwargs):
         super().__init__(input_transform='multiple_select', **kwargs)
