@@ -39,14 +39,14 @@ We visualize the experimental results and it is shown that the four comparison m
 
 | Method | Backbone |Input size  | F1  | Model |
 | ------ | -------- |---------- | ------- | --- |
-| DSQNet| Swin-T |512 × 512 | 92.01 |  [baidu](https://pan.baidu.com/s/1-2IuJaOjhEi5luGk3sO2tw?pwd=rbsv) |
-| DSQNet| ViTAEv2-S |512 × 512 | 92.37 |  [baidu](https://pan.baidu.com/s/1nEQ_o63hzl4Y8goqBHcVMg?pwd=inzx) |
+| DSQNet| Swin-T |512 × 512 | 92.03 |  [baidu](https://pan.baidu.com/s/1-2IuJaOjhEi5luGk3sO2tw) |
+| DSQNet| ViTAEv2-S |512 × 512 | 92.44 |  [baidu](https://pan.baidu.com/s/1nEQ_o63hzl4Y8goqBHcVMg) |
 ### S2Looking
 
 | Method | Backbone |Input size | F1 | Model |
 | ------ | -------- |---------- | ------- | --- |
-| DSQNet| Swin-T |512 × 512 | 66.69 |  [baidu](https://pan.baidu.com/s/1x4EynqGiKNOdrT4nfWom3g?pwd=ztga ) |
-| DSQNet| ViTAEv2-S |512 × 512 | 67.08 |  [baidu](https://pan.baidu.com/s/1ee88ZbYrYKm0NhpCU1gl2g?pwd=4ky8 ) |
+| DSQNet| Swin-T |512 × 512 | 66.85 |  [baidu](https://pan.baidu.com/s/1x4EynqGiKNOdrT4nfWom3g) |
+| DSQNet| ViTAEv2-S |512 × 512 | 67.08 |  [baidu](https://pan.baidu.com/s/1ee88ZbYrYKm0NhpCU1gl2g) |
 
 ## Usage
 
