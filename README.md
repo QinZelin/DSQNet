@@ -39,6 +39,7 @@ We visualize the experimental results and it is shown that the four comparison m
 | DSQNet| Swin-T |512 × 512 | 66.85 |  [baidu](https://pan.baidu.com/s/1x4EynqGiKNOdrT4nfWom3g) |
 | DSQNet| ViTAEv2-S |512 × 512 | 67.08 |  [baidu](https://pan.baidu.com/s/1ee88ZbYrYKm0NhpCU1gl2g) |
 
+DSIFN and SVCD dataset [baidu](https://pan.baidu.com/s/1Nl-DVISvFQHqTJALslThqQ)
 ## Usage
 
 ### Installation
