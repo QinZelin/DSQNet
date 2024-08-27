@@ -1,12 +1,3 @@
-<h1 align="center"> DSQNet: Enhancing Change Detection Network via Deep Semantics Query for Remote Sensing Images </h1> 
-
-<p align="center">
-  <a href="#introduction">Introduction</a> |
-  <a href="#statement">Statement</a> |
-  <a href="#results-and-models">Results & Models</a> |
-  <a href="#usage">Usage</a> |
-</p >
-
 ## Introduction
 
 This repository contains codes for "DSQNet: Enhancing Change Detection Network via Deep Semantics Query for Remote Sensing Images". 
