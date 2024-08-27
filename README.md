@@ -17,7 +17,7 @@ Change detection from remote sensing (RS) images has made significant progress i
 <div align="center">
 <img src=DSQ.png width="80%">
 </div>
-<figcaption align = "center"><b>(a) is the overall framework of DSQNet. (b) is a visual illustration of the BMQ module. The query key and extracted features are all from DSP in figture (b). </b></figcaption>
+<figcaption align = "center"><b>(a) is the overall framework of DSQNet. (b) is a visual illustration of the BMQ module.</b></figcaption>
 </figure>
 
 ## Statement
@@ -32,7 +32,7 @@ We visualize the experimental results and it is shown that the four comparison m
 <div align="center">
 <img src=result.png width="60%">
 </div>
-<figcaption align = "center"><b>Comparison of change maps of different methods on LEVIR-CD and S2Looking dataset. The red and green colors represent FP and FN results, respectively. (a) T1. (b) T2. (c) Ground Truth. (d) STANet. (e) BiT. (f) AANet. (g) ChangerAD. (h) Ours. </b></figcaption>
+<figcaption align = "center"><b>Comparison of change maps of different methods on LEVIR-CD and S2Looking dataset. The red and green colors represent FP and FN results, respectively. (a) T1. (b) T2. (c) Ground Truth. (d) BiT. (e) AANet. (f) ChangerAD. (g) TransYNet. (h) Ours. </b></figcaption>
 </figure>
 
 ### LEVIR-CD
