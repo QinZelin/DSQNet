@@ -36,7 +36,9 @@ other advanced change detection networks.
 <figcaption align = "center"><b>Fig.1 - The overall framework of DSQNet </b></figcaption>
 </figure>
 <figure>
-<img src=myvisualization.png align="center">
+<div align="center">
+<img src=myvisualization.png>
+</div>
 <figcaption align = "center"><b>Fig.2 - Comparison of result mask maps by various methods on different
 datasets. </b></figcaption>
 </figure>
