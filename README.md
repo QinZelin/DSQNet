@@ -6,7 +6,8 @@
   <a href="#Results">Results</a> |
   <a href="#usage">Usage</a> |
 </p >
-## Introduction
+
+# Introduction
 
 Abstract— Change detection from remote sensing (RS) images has made significant progress in many applications including environmental
 protection and agricultural monitoring. Recently, RS change detection
@@ -39,7 +40,8 @@ other advanced change detection networks.
 </div>
 </figure>
 
-#Results
+# Results
+
 |Dataset|Backbone | Input size | Params (M) | Fscore| IoU|
 |-------|-------- | ----------  | ----- | ----- | ----- |
 | LEVIR-CD |Swin-T | 512 × 512 | 29.5M| 92.03 | 85.24 |
@@ -51,7 +53,7 @@ other advanced change detection networks.
 | S2Looking | ViTAE-S |256 × 256 | 19.8M| 67.08 | 50.47|
 | DSIFN | ViTAE-S | 256 × 256 | 19.8M | 70.01| 54.32 |
 
-#Usage
+# Usage
 ### Installation
 The code framework is mainly borrowed from open-cd. Thus,
 please refer to [opencd-README.md](https://github.com/likyoo/open-cd/blob/main/README.md) for installing main packeges such as python, pytorch, etc.
