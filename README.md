@@ -1,9 +1,8 @@
-### Installation
 # DSQNet: Enhancing Change Detection Network via Deep Semantics Query for Remote Sensing Images
 ### Zilin Qin and Lefei Zhang
 
 <p align="center">
-  <a href="#introduction">Introduction</a> |
+  |<a href="#introduction">Introduction</a> |
   <a href="#Results">Results</a> |
   <a href="#usage">Usage</a> |
 </p >
@@ -33,14 +32,11 @@ other advanced change detection networks.
 
 <figure>
 <img src=DSQNet_framework.png>
-<figcaption align = "center"><b>Fig.1 - The overall framework of DSQNet </b></figcaption>
 </figure>
 <figure>
 <div align="center">
 <img src=myvisualization.png>
 </div>
-<figcaption align = "center"><b>Fig.2 - Comparison of result mask maps by various methods on different
-datasets. </b></figcaption>
 </figure>
 
 #Results
@@ -56,6 +52,7 @@ datasets. </b></figcaption>
 | DSIFN | ViTAE-S | 256 × 256 | 19.8M | 70.01| 54.32 |
 
 #Usage
+### Installation
 The code framework is mainly borrowed from open-cd. Thus,
 please refer to [opencd-README.md](https://github.com/likyoo/open-cd/blob/main/README.md) for installing main packeges such as python, pytorch, etc.
 
