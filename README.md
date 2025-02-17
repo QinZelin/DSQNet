@@ -2,7 +2,7 @@
 ### Zilin Qin and Lefei Zhang
 
 <p align="center">
-  |<a href="##introduction">Introduction</a> |
+  | <a href="##introduction">Introduction</a> |
   <a href="##Results">Results</a> |
   <a href="##usage">Usage</a> |
 </p >
