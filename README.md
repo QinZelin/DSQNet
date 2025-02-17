@@ -29,7 +29,7 @@ module. It realizes interlayer feature adjustment from the inside out
 in the pyramid and enables query vectors to represent extremely rich
 semantics, improving query efficiency. Experimental results on four
 benchmark datasets show that DSQNet achieves better performance than
-other advanced change detection networks.Z
+other advanced change detection networks.
 
 <figure>
 <img src=DSQNet_framework.png>
@@ -42,9 +42,8 @@ datasets. </b></figcaption>
 </figure>
 
 #Results
-#### results
 |Dataset|Backbone | Input size | Params (M) | Fscore| IoU|
-|-------|-------- | ----------  | ----- | ----- |
+|-------|-------- | ----------  | ----- | ----- | ----- |
 | LEVIR-CD |Swin-T | 512 × 512 | 29.5M| 92.03 | 85.24 |
 | SVCD |Swin-T |  512 × 512 | 29.5M |97.20 | 94.55|
 | S2Looking | Swin-T |256 × 256 | 29.5M| 66.85 | 50.21|
