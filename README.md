@@ -32,8 +32,13 @@ benchmark datasets show that DSQNet achieves better performance than
 other advanced change detection networks.Z
 
 <figure>
-<img src=Figs/framework.png>
-<figcaption align = "center"><b>Fig.1 - The pipeline of pretraining and finetuning. </b></figcaption>
+<img src=DSQNet_framework.png>
+<figcaption align = "center"><b>Fig.1 - The overall framework of DSQNet </b></figcaption>
+</figure>
+<figure>
+<img src=myvisualization.png>
+<figcaption align = "center"><b>Fig.2 - Comparison of result mask maps by various methods on different
+datasets. </b></figcaption>
 </figure>
 
 #Results
@@ -47,6 +52,12 @@ other advanced change detection networks.Z
 | SVCD |ViTAE-S |  512 × 512 | 19.8M |97.66 | 95.43|
 | S2Looking | ViTAE-S |256 × 256 | 19.8M| 67.08 | 50.47|
 | DSIFN | ViTAE-S | 256 × 256 | 19.8M | 70.01| 54.32 |
+
+#### MillionAID
+|Pretrain|Backbone | Input size | Params (M) | Pretrained model|
+|-------|-------- | ----------  | ----- | ----- |
+| MAE | ViT-B | 224 × 224 | 86| [Weights](https://1drv.ms/u/s!AimBgYV7JjTlgUPBC6cvpo4oZDSR?e=kNCAhO) |
+| MAE | ViTAE-B | 224 × 224 | 89 | [Weights](https://1drv.ms/u/s!AimBgYV7JjTlgUIde2jzcjrrWasP?e=gyLn29) |
 #Usage
 The code framework is mainly borrowed from open-cd. Thus,
 please refer to [opencd-README.md](https://github.com/likyoo/open-cd/blob/main/README.md) for installing main packeges such as python, pytorch, etc.
